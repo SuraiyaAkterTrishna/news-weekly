@@ -1,4 +1,5 @@
-.nav-item.active {
+.nav-item.active{
     border-bottom: 1px solid green;
+    font-weight: bold;
   }
   
