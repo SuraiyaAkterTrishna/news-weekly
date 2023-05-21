@@ -22,8 +22,9 @@ const loadCategories = async () => {
     });
   };
   const loadCategoryItems = async (category_id) => {
-    // console.log(category_id);
-    const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    const id = category_id.toString().padStart(2, '0');
+    console.log(id);
+    const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
     const res = await fetch(url);
     const data = await res.json();
     displayCategoryItems(data);
