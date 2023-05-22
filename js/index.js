@@ -9,6 +9,7 @@ const displayCategories = (categories) => {
   const categoriesContainer = document.getElementById("categories-container");
 
   categoriesContainer.style.display = "flex";
+  categoriesContainer.style.flexWrap = "wrap";
 
   categories.forEach((category) => {
     // console.log(category);
@@ -49,7 +50,7 @@ const displayCategoryItems = (items) => {
   const itemsContainer = document.getElementById("itemsContainer");
   itemsContainer.innerHTML = ``;
   items.forEach((item) => {
-    // console.log(item);
+    console.log(item);
     const itemDiv = document.createElement("div");
     itemDiv.classList.add("col");
     itemDiv.innerHTML = `
@@ -109,7 +110,7 @@ const displayCategoryItems = (items) => {
                       </span>
                     </div>
                     <div>
-                      <button class="btn btn-success">Show Details</button>
+                      <button onclick="loadDetails('${item._id}')" class="btn btn-success">Show Details</button>
                     </div>
                   </div>
           </div>
@@ -120,4 +121,7 @@ const displayCategoryItems = (items) => {
     itemsContainer.appendChild(itemDiv);
   });
 };
+const loadDetails= (id) => {
+  
+}
 loadCategories();
