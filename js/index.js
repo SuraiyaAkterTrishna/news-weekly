@@ -110,7 +110,7 @@ const displayCategoryItems = (items) => {
                       </span>
                     </div>
                     <div>
-                      <button onclick="loadDetails('${item._id}')" class="btn btn-success">Show Details</button>
+                      <button onclick="loadItemDetails('${item._id}')" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#itemDetailModal">Show Details</button>
                     </div>
                   </div>
           </div>
@@ -121,7 +121,7 @@ const displayCategoryItems = (items) => {
     itemsContainer.appendChild(itemDiv);
   });
 };
-const loadDetails= (id) => {
-  
+const loadItemDetails= (id) => {
+
 }
 loadCategories();
